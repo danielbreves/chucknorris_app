@@ -1,0 +1,14 @@
+*{
+    font-family: 'Special Elite';
+}
+.fact{
+    font-size: 18px;
+}
+.norris{
+    height: 240px;
+    display:block;
+    margin:auto;
+}
+.fail{
+    font-size: 22px;
+}

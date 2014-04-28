@@ -1,0 +1,6 @@
+<link href='http://fonts.googleapis.com/css?family=Special+Elite' rel='stylesheet' type='text/css'>
+<section data-main id='norris-main'>
+	<img class='norris' src='{{assetURL image}}'/>
+	<br/>
+	<div class='fact'>{{fact}}</div>
+</section>

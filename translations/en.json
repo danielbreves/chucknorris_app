@@ -1,0 +1,18 @@
+{
+  "app": {
+    "package": "zendesk",
+    "description": {
+      "value": "Chuck Norris facts",
+	    "title": "app description"
+    },
+    "name": {
+      "value": "Chuck Norris",
+      "title": "app name"
+    }
+  },
+
+  "loading": {
+    "value": "Chuck Norris is warming up....",
+    "title": "loading placeholder"
+  }
+}

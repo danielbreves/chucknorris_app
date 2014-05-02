@@ -1,10 +1,9 @@
 {
-  "name": "Chuck Norris app",
+  "name": "Chuck Norris App",
   "author": {
     "name": "Chuck Norris",
     "email": "chuck.norris@zendesk.com",
-    "url": "http://www.chucknorris.com"
-  },
+    "url": "http://www.chucknorris.com",
   "defaultLocale": "en",
   "private": false,
   "location": ["ticket_sidebar", "new_ticket_sidebar"],

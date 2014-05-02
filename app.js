@@ -31,27 +31,29 @@
 				this.renderNorris(data.value.joke);
 			},
 			'fetchNorris.fail': function (data){
-				var self=this;
-				setTimeout(function(){ self.ajax('fetchNorris');}, 500);
+				this.errorNotify('fetchNorris');
 			},
 			'fetchNorrisFiltered.done': function (data) {
 				this.renderNorris(data.value.joke);
 			},
 			'fetchNorrisFiltered.fail': function (data){
-				var self=this;
-				setTimeout(function(){ self.ajax('fetchNorrisFiltered');}, 500);
+				this.errorNotify('fetchNorrisFiltered');
 			}
+		},
+
+		errorNotify: function(request) {
+			var self=this;
+			services.notify("There's an issue getting the quotes but check this out: <a href='http://bit.ly/1kuKXqv'>Chuck Norris in a dress.</a>", "alert");
+			setTimeout(function(){ self.ajax(request);}, 500);
 		},
 
 		init: function () {
 			if ( this.setting('partyPooper') === false ) {
 				this.ajax('fetchNorris');
 				this.counter = 1;
-				// console.log("NSFW"); // The jokes are not filtered
 			} else {
 				this.ajax('fetchNorrisFiltered');
 				this.counter = 1;
-				// console.log("SFW"); // The jokes are filtered
 			}
 		},
 		renderNorris: function (fact) {

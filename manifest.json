@@ -2,16 +2,19 @@
   "name": "Chuck Norris App",
   "author": {
     "name": "Chuck Norris",
-    "email": "chuck.norris@zendesk.com",
-    "url": "http://www.chucknorris.com",
+    "email": "chuck.norris@chuck.com"
+  },
   "defaultLocale": "en",
   "private": false,
   "location": ["ticket_sidebar", "new_ticket_sidebar"],
   "version": "1.0",
   "frameworkVersion": "1.0",
-  "parameters": [{
-    "name": "partyPooper",
-    "type": "checkbox",
-    "required": false
-    }]
+  "singleInstall": true,
+  "parameters": [
+    {
+      "name": "partyPooper",
+      "type": "checkbox",
+      "required": false
+    }
+  ]
 }

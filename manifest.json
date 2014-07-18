@@ -1,8 +1,8 @@
 {
   "name": "Chuck Norris App",
   "author": {
-    "name": "Jeremiah Currier",
-    "email": "jcurrier@zendesk.com"
+    "name": "Chuck Norris",
+    "email": "chuck@norris.com"
   },
   "defaultLocale": "en",
   "private": false,

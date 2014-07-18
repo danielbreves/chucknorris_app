@@ -1,6 +1,6 @@
 {
   "app": {
-    "package": "zendesk",
+    "package": "chucknorris",
     "description": {
       "value": "Chuck Norris facts",
 	    "title": "app description"
@@ -14,5 +14,17 @@
   "loading": {
     "value": "Chuck Norris is warming up....",
     "title": "loading placeholder"
+  },
+  "parameters": {
+      "partyPooper": {
+        "label": {
+          "value": "Activate Party Pooper mode",
+          "title": "label of the setting"
+        },
+        "helpText": {
+          "value": "This mode will turn the Chuck Norris App into a Safe For The Workfplace app, thus removing potentially offensive quotes. We strongly advise against it. Just because.",
+          "title": "helpText."
+        }
+    }
   }
 }

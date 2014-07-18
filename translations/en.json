@@ -8,14 +8,8 @@
     "name": {
       "value": "Chuck Norris",
       "title": "app name"
-    }
-  },
-
-  "loading": {
-    "value": "Chuck Norris is warming up....",
-    "title": "loading placeholder"
-  },
-  "parameters": {
+    },
+   "parameters": {
       "partyPooper": {
         "label": {
           "value": "Activate Party Pooper mode",
@@ -26,5 +20,10 @@
           "title": "helpText."
         }
     }
+  },
+  "loading": {
+    "value": "Chuck Norris is warming up....",
+    "title": "loading placeholder"
+    },
   }
 }

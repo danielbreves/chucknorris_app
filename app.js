@@ -58,7 +58,7 @@
                 fact: fact,
                 image: image
             });
-    //        setTimeout(function(){ self.ajax('fetchNorris'); }, 5000);
+            setTimeout(function(){ self.ajax('fetchNorris'); }, 5000);
         }
     };
 

@@ -30,41 +30,50 @@
             'app.deactivated': 'cleanup',
             'app.willDestroy': 'cleanup',
             'fetchNorris.done': function (data) {
+                this.failureCounter = 0;
                 this.renderNorris(data.value.joke);
             },
             'fetchNorris.fail': function (data){
-                this.ajax('fetchNorris'); // Retrying request
+                this.failureCounter = Math.max(10, this.failureCounter + 1);
+
+                // Retry request after delay
+                this.timeout = _.delay(this.ajax.bind(this, 'fetchNorris'), 1000 * this.failureCounter);
             },
             'fetchNorrisFiltered.done': function (data) {
+                this.failureCounter = 0;
                 this.renderNorris(data.value.joke);
             },
             'fetchNorrisFiltered.fail': function (data){
-                this.ajax('fetchNorrisFiltered'); // Retrying request
+                this.failureCounter = Math.max(10, this.failureCounter + 1);
+
+                // Retry request after delay
+                this.timeout = _.delay(this.ajax.bind(this, 'fetchNorrisFiltered'), 1000 * this.failureCounter);
             }
         },
 
         init: function () {
             if ( this.setting('partyPooper') === false ) {
                 this.ajax('fetchNorris');
-                this.counter = 1;
             } else {
                 this.ajax('fetchNorrisFiltered');
-                this.counter = 1;
             }
+            this.counter = 1;
+            this.failureCounter = 0;
         },
         renderNorris: function (fact) {
             var image = 'norris-' + this.counter + '.jpg';
             this.counter = Math.max(1,((this.counter + 1) % 4));
-            var self = this;
             this.switchTo('layout', {
                 fact: fact,
                 image: image
             });
-            this.timeout = setTimeout(function(){ self.ajax('fetchNorris'); }, 5000);
+            this.timeout = _.delay(this.ajax.bind(this, 'fetchNorris'), 5000);
         },
 
         cleanup: function() {
-          clearTimeout(this.timeout);
+          if (this.timeout) {
+            clearTimeout(this.timeout);
+          }
         }
     };
 

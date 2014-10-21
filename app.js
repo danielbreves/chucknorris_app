@@ -27,6 +27,8 @@
         },
         events: {
             'app.activated': 'init',
+            'app.deactivated': 'cleanup',
+            'app.willDestroy': 'cleanup',
             'fetchNorris.done': function (data) {
                 this.renderNorris(data.value.joke);
             },
@@ -58,7 +60,11 @@
                 fact: fact,
                 image: image
             });
-            setTimeout(function(){ self.ajax('fetchNorris'); }, 5000);
+            this.timeout = setTimeout(function(){ self.ajax('fetchNorris'); }, 5000);
+        },
+
+        cleanup: function() {
+          clearTimeout(this.timeout);
         }
     };
 

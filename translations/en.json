@@ -16,7 +16,7 @@
                     "title": "label of the setting"
                 },
                 "helpText": {
-                    "value": "This mode will turn the Chuck Norris App into a Safe For The Workfplace app, thus removing potentially offensive quotes. We strongly advise against it. Just because.",
+                    "value": "This mode will turn the Chuck Norris App into a Safe For Work app, thus removing potentially offensive quotes. We strongly advise against it. Just because.",
                     "title": "helpText."
                 }
             }

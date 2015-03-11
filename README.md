@@ -9,3 +9,7 @@ If the optional setting "partyPooper" is checked that will tone down the vulgari
 # Screenshots
 
 ![](http://g.recordit.co/0y6gHCwLmb.gif)
+
+##### Look for this in the Zendesk Apps Marketplace
+
+![](http://i.imgur.com/bixQCt5.png)
